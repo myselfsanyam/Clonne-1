@@ -1,95 +1,46 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import { useState } from "react";
+import Link from "next/link";
+import styles from "./page.module.scss";
 
 export default function Home() {
+  const obj = {
+    email:'',
+    password:'',
+  }
+  const [email,setEmail]= useState('');
+  const [password,setPassword]= useState('');
+
+  const handleOnClick=()=>{
+    obj.email=email;
+    obj.password=password;
+  }
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.container}>
+      <div className={styles.item1}>
+        <Link href={'/'}><img className={styles.logo} src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Linktree_logo.svg/768px-Linktree_logo.svg.png?20230519151448"/></Link>
+        <header>
+          <h1 className={styles.heading}><b>Join Linktree</b></h1>
+        </header>
+        <p className={styles.head2}>Sign up for free!</p>
+        <div className={styles.mid_section}>
+        <input value={email} onChange={(e)=>setEmail(e.target.value)} className={styles.input} placeholder="Email" type="email" /><br />
+        <input value={password} onChange={(e)=>setPassword(e.target.value)} className={styles.input} placeholder="Password" type="password" /><br />
+        <Link href={'/page-2'}><button style={{cursor:'pointer'}} onClick={handleOnClick} className={styles.button}>Create account</button></Link>
         </div>
+        <div className={styles.section_2}>
+        By clicking <b>Create account</b>, you agree to Linktree's <Link href={'/terms'}><u>Terms and Conditions</u></Link> and confirm you have read our <Link href={'/policy'}><u>Privacy Notice</u></Link>. You may receive offers, news and updates from us.
+        </div>
+        <p className={styles.section_3}>OR</p>
+        <Link href={'/google'}><button className={styles.button2} style={{cursor:'pointer'}}><img className={styles.button_image} src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google image" /> <b> Sign up with Google</b></button></Link>
+        <Link href={'/apple'}><button className={styles.button2} style={{cursor:'pointer'}}><img className={styles.button_image} src="https://toppng.com/uploads/preview/apple-logo-logo-png-hd-11659045607tbk23cqe0z.png" alt="Apple logo png" /> <b> Sign up with Apple</b></button></Link>
+        <p className={styles.section_4}>Already have an account? <Link href={'/login'}><u style={{color:"purple"}}>Log in</u></Link></p>
+        <footer className={styles.footer}>
+          <p>This site protected by reCAPTCHA and the <u>Google Privacy Policy</u> and <u>Terms of Service</u> apply.</p>
+        </footer>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={styles.item2}>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }

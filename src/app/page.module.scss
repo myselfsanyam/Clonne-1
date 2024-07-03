@@ -1,0 +1,288 @@
+.container {
+  display: flex;
+}
+
+.container2 {
+  display: flex;
+}
+
+.item1 {
+  width: 95vw;
+  height: 100vh;
+}
+
+.heading {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.head2 {
+  text-align: center;
+  color: grey;
+  margin-top: 15px;
+}
+
+.head3 {
+  text-align: right;
+  color: grey;
+  margin-top: 20px;
+  margin-right:20px;
+}
+
+.mid_section {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.input {
+  width: 35vw;
+  height: 50px;
+  font-size: 17px;
+  padding: 0 25px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(242, 241, 241);
+}
+
+.input2 {
+  margin-top: 40px;
+  width: 45vw;
+  height: 50px;
+  font-size: 17px;
+  padding: 0 25px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(242, 241, 241);
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.button {
+  width: 35vw;
+  height: 50px;
+  font-size: 17px;
+  padding: 0 25px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(242, 241, 241);
+}
+
+.button2 {
+  width: 75%;
+  height: 50px;
+  font-size: 17px;
+  padding: 0 25px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: 1px solid gray;
+  background-color: white;
+  margin-left: 5vw;
+}
+
+.button3 {
+  margin-top: 40px;
+  width: 45vw;
+  height: 50px;
+  font-size: 17px;
+  padding: 0 25px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(242, 241, 241);
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.button4 {
+  color: white;
+  width: 50vw;
+  height: 50px;
+  font-size: 17px;
+  padding: 0 25px;
+  border-radius: 30px;
+  border: none;
+  background-color: blueviolet;
+  margin-left: 25vw;
+  margin-right: 25vw;
+}
+
+
+.logo {
+  margin: 40px;
+  width: 9vw;
+}
+
+.button_image {
+  height: 17px;
+  align-items: center;
+}
+
+.section_2 {
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+  margin-left: 6.5vw;
+  margin-right: 6.5vw;
+}
+
+.section_3 {
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+  margin-left: 6.5vw;
+  margin-right: 6.5vw;
+}
+
+.section_4 {
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+  margin-left: 6.5vw;
+  margin-right: 6.5vw;
+}
+
+.section_5 {
+  font-size: 15px;
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+  margin-left: 6.5vw;
+  margin-right: 6.5vw;
+  margin-top: 30px;
+}
+
+.section_6 {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+  margin-left: 6.5vw;
+  margin-right: 6.5vw;
+  margin-top: 30px;
+}
+
+.footer {
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+  margin-left: 6.5vw;
+  margin-right: 6.5vw;
+}
+
+.item2 {
+  width: 105vw;
+  height: 100vh;
+  background-color: #FFDB58;
+}
+
+.item3 {
+  width: 135vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.item4 {
+  width: 65vw;
+  height: 100vh;
+  background-color: blueviolet;
+}
+
+.flexx{
+  margin-top: 100px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6,120px);
+  grid-template-rows: repeat(2,130px);
+}
+
+.it{
+  border-radius: 50px;
+  background-color: yellowgreen;
+  height: 100px;
+  width: 100px;
+}
+
+.p_in{
+  margin-left: 12px;
+}
+
+.img{
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+}
+
+@media(max-width:640px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item1{
+    height: 100vh;
+  }
+
+  .item2{
+    height: 90vh;
+  }
+
+  .item3 {
+    width: 110vw;
+  }
+
+  .item4 {
+    width: 100vw;
+  }
+
+  .button2 {
+    margin-left: 12vw;
+  }
+
+  .input2 {
+    margin-top: 40px;
+    width: 80vw;
+    height: 50px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(242, 241, 241);
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  
+  .button3 {
+    margin-top: 40px;
+    width: 80vw;
+    height: 50px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(242, 241, 241);
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  .flexx{
+    margin-top: 120px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,120px);
+    grid-template-rows: repeat(5,130px);
+  }
+}
